@@ -21,6 +21,7 @@ public class DynamicActivity extends AppCompatActivity {
 
     public void handleClickLoadRedFragment(View view) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.replace(R.id.dynamic_fragment_placeholder,new redfragment(),"RED_FRAGMENT");
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
@@ -28,6 +29,7 @@ public class DynamicActivity extends AppCompatActivity {
 
     public void handleClickLoadBlueFragment(View view) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.replace(R.id.dynamic_fragment_placeholder,new bluefragment(),"BLUE_FRAGMENT");
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
